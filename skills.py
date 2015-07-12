@@ -434,3 +434,10 @@ if __name__ == "__main__":
             a = doctest.run_docstring_examples(v, globals(), name=k)
     print "** END OF TEST OUTPUT"
     print
+
+
+# Trying a doctest...
+if __name__ == "__main__":
+    import doctest
+    print "doctest ran"
+    doctest.testmod()
