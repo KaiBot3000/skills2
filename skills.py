@@ -437,7 +437,8 @@ if __name__ == "__main__":
 
 
 # Trying a doctest...
+# doctests use the docstring to identify what to test for.
 if __name__ == "__main__":
     import doctest
-    print "doctest ran"
+    print "doctest ran" #because no output!
     doctest.testmod()
