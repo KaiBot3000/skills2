@@ -65,13 +65,14 @@ def find_common_items(list1, list2):
         [1, 1, 2, 2]
 
     """
-    #loop through one list
-        #comparre each item to second list
-        # if in second list, add to common_numbers
+
     common_numbers = []
     i = 0
+
     while i < len(list1):
+
         for number in list2:
+
             if list1[i] == number:
                 common_numbers.append(number)
         i += 1
@@ -102,9 +103,12 @@ def find_unique_common_items(list1, list2):
     """
     common_items = find_common_items(list1, list2)
     common_dict = {}
+
     for item in common_items:
         common_dict[item] = None
+
     unique_common_items = common_dict.keys()
+
     return unique_common_items
 
 
@@ -137,11 +141,7 @@ def get_sum_zero_pairs(input_list):
         [[-2, 2], [-1, 1], [0, 0]]
 
     """
-    #iterate over list
-        #iterate over list again
-        #compare each item to each item, if == 0
-            #add list[i], list[j] to tuple
-            #add tuple to dictionary
+
     input_list.sort()
 
     i = 0
@@ -387,17 +387,16 @@ def adv_alpha_sort_by_word_length(words):
 
     """
     words_dict = {}
+    
     for word in words:
         word_length = len(word)
+        
         if word_length in words_dict.keys():
             words_dict[word_length].append(word)
         else:
             words_dict[word_length] = [word]
 
     words_tuples_list = words_dict.items()
-
-    #for word_tuple in words_tuples
-
     sorted_words_tuples_list = sorted(words_tuples_list)
 
     for words_tuple in sorted_words_tuples_list:
