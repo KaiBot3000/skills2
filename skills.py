@@ -348,7 +348,7 @@ def adv_get_top_letter(input_string):
     character_dict = {}
 
     i = 0
-    
+
     while i < len(input_string):
         if input_string[i] in character_dict.keys():
             character_dict[input_string[i]] += 1
@@ -386,8 +386,25 @@ def adv_alpha_sort_by_word_length(words):
         [(1, ['a']), (2, ['an', 'ok']), (3, ['day']), (5, ['apple'])]
 
     """
+    words_dict = {}
+    for word in words:
+        word_length = len(word)
+        if word_length in words_dict.keys():
+            words_dict[word_length].append(word)
+        else:
+            words_dict[word_length] = [word]
 
-    return []
+    words_tuples_list = words_dict.items()
+
+    #for word_tuple in words_tuples
+
+    sorted_words_tuples_list = sorted(words_tuples_list)
+
+    for words_tuple in sorted_words_tuples_list:
+        words_tuple[1].sort()
+
+    return sorted_words_tuples_list
+
 
 
 ##############################################################################
